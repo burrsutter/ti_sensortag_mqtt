@@ -1,6 +1,6 @@
 var mqtt    = require('mqtt');
 var SensorTag = require('sensortag');
-var client  = mqtt.connect('mqtt://192.168.2.2');
+var client  = mqtt.connect('mqtt://192.168.3.3');
 
 SensorTag.discover(function(device) {
   console.log('discovered device with UUID: ' + device['uuid']);
@@ -14,7 +14,7 @@ SensorTag.discover(function(device) {
             console.log('\tx = %d ', x);
             console.log('\ty = %d ', y);
             console.log('\tz = %d ', z);
-            client.publish('magtopic', 'X:' + x.toFixed(1) +  ' Y:' + y.toFixed(1) + ' Z:' + z.toFixed(1) );
+            client.publish('mag_topic', 'X:' + x.toFixed(1) +  ' Y:' + y.toFixed(1) + ' Z:' + z.toFixed(1) );
           });
 
           device.notifyMagnetometer(function() {

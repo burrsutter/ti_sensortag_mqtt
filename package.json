@@ -2,7 +2,7 @@
   "name": "ti_sensortag_mqtt",
   "version": "1.0.0",
   "description": "Sends TI SensorTag readings to MQTT topic",
-  "repository" : "https://github.com/burrsutter/ti_sensortag_mqtt",
+  "repository": "https://github.com/burrsutter/ti_sensortag_mqtt",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "mqtt": "^1.1.2",
     "sensortag": "^0.1.11"
   }
 }

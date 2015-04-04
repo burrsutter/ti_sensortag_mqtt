@@ -1,6 +1,6 @@
 var mqtt    = require('mqtt');
 var SensorTag = require('sensortag');
-var client  = mqtt.connect('mqtt://192.168.2.2');
+var client  = mqtt.connect('mqtt://192.168.3.3');
 
 SensorTag.discover(function(device) {
   console.log('discovered device with UUID: ' + device['uuid']);
