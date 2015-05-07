@@ -16,8 +16,8 @@ SensorTag.discover(function(device) {
           client.publish('ti_temp', objectTemperature.toFixed(1));
         });
 
-        device.notifyHumidity(function() {
-          console.log('notifyHumidity');
+        device.notifyIrTemperature(function() {
+          console.log('notifyIrTemperature');
         });
 
       }); // enableIrTemperature
