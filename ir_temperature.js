@@ -12,7 +12,7 @@ SensorTag.discover(function(device) {
         device.on('irTemperatureChange', function(objectTemperature, ambientTemperature) {
           console.log('\tobject temperature is %d °C', objectTemperature.toFixed(1));
           // console.log('\tambient temperature = %d %', ambientTemperature.toFixed(1));
-          client.publish('temp_rpi_DS18B20', 
+          client.publish('temp_ti_cc2541', 
             '{"sensorid":"ti_cc2541",' +
             ' "temp":' + objectTemperature.toFixed(1) + ',' +
             ' "time":' + Date.now() + '}'
