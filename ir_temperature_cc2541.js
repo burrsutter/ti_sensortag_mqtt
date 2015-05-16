@@ -4,6 +4,10 @@ var client  = mqtt.connect('mqtt://192.168.3.2');
 
 SensorTag.discover(function(device) {
   console.log('discovered device with UUID: ' + device['uuid']);
+  if(device['uuid'] !== 'b4994c64b96a') {
+    console.log("Wrong TI SensorTag, Try Again");
+    process.exit();
+  }
   device.connect(function() {
     console.log('connected');
     device.discoverServicesAndCharacteristics(function() {
